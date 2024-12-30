@@ -1,0 +1,46 @@
+*{
+    padding:0;
+    margin:0;
+}
+.body{
+    background: url("backgroundimg.jpg");
+    min-height:100vh;
+    background-size:100vw 100vh;/*width height*/
+    background-position:center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#score{
+    position:absolute;
+    top:9px;
+    right:200px;
+    font-size:40px;
+    font-weight:800;
+}
+#board{
+   /* background: linear-gradient(rgb(148, 203, 148),yellow);/*2 colors can use*/
+    width:90vmin;/*vmin among vh and vw it takes which is small*/
+    height:90vmin;
+    border:6px solid black;
+    display:grid;
+    grid-template-rows:repeat(18,1fr);/*1fr per unit grid repeat 18 times*/ 
+    grid-template-columns:repeat(18,1fr);/* 18 cols */
+    opacity:0.8;
+}
+.head{
+    background: linear-gradient(red,yellow);
+    border:2px solid blue;
+    border-radius:6px;
+    transform:scale(1.02);
+}
+.snake{
+    background-color: rgb(50, 22, 50);
+    border:.25vmin solid white;
+    border-radius:12px;
+}
+.food{
+    background:linear-gradient(rgb(10, 107, 10),rgb(200, 255, 0));
+    border: .2vmin solid rgb(24, 23, 23);
+    border-radius:8px;
+}
